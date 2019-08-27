@@ -1,0 +1,11 @@
+To replicate our experiments, you need to download:
+    Python 3.6 onwards
+	dyNET  0.0.0 and its dependencies (Follow instructions on https://dynet.readthedocs.io/en/latest/python.html)
+	
+	On a side note, when you install DyNet make sure that you are using CUDA 9 and CUDNN for CUDA 9. I used the following command:
+	CUDNN_ROOT=/path_to_conda/pkgs/cudnn-7.3.1-cuda10.0_0 BACKEND=/path_to_conda/pkgs/cudatoolkit-10.0.130-0 pip install git+https://github.com/clab/dynet#egg=dynet
+	
+	Using CUDA 10 will generate an error when calling DyNet.
+
+    Sluice Networks (Ruder et al. 2017 ) 
+    Babylon/ MUSE embeddings
