@@ -1,0 +1,45 @@
+Dataset:
+
+The dataset is composed of three csv files sorted by language. They contain the tweets and the annotations described in our paper namely, the hostility type ( tweet sentiment), hostility directness, target attribute, target group and, annottaor's sentiment.
+
+To replicate our experiments, please follow the guidelines below.
+
+Python files:
+	- annotated_data_processing.py: contains a normalization function that cleans the content of the tweets.
+	- constants.py: defines constants used across all files.
+	- utils.py: utility methods for data processing.
+	- baseline_classifiers.py: allows you to run majority voting and logistic regression by calling:
+		- run_majority_voting(train_filename, dev_filename, test_filename, attribute) or
+		- run_logistic_regression(train_filename, dev_filename, test_filename, attribute)
+	  on csv files of the same form of the dataset.	
+	- predictors.py: Contains classes for sequence predictors and layers.
+	- run_sluice_net.py: Script to train, load, and evaluate SluiceNetwork.
+	- sluice_net.py: The main logic for the SluiceNetwork. (Ruder et al. 2017. More details on the implementation of Sluice networks
+	  can be found on https://github.com/sebastianruder/sluice-networks)
+	  
+Prereqisites:
+		- cross-lingual word embeddings (Babylon or MUSE. The reported results have been run using Babylon.)
+		- To save and load the trained model, you need to create a directory (e.g., model/), and specify the name of the created directory when using --model-dir argument in the command line.
+		- To save the log files of the training and evaluation, you need to create a directory (e.g., log/), and specify the name of the created directory when using --log-dir argumnet in the command line.
+
+
+How to run the program:
+	Example:
+	python run_sluice_net.py --dynet-autobatch 1  --dynet-gpus 3 --dynet-seed 123 \
+                          --h-layers 1 \
+                         --cross-stitch\
+                         --num-subspaces 2 --constraint-weight 0.1 \
+                         --constrain-matrices 1 2 --patience 3 \
+                         --languages ar en fr \
+			 --test-languages ar en fr \
+                         --model-dir model/ --log-dir log/\
+                         --task-names annotator_sentiment sentiment directness group target \
+			 --train-dir '/path/to/train' \
+                         --dev-dir '/path/to/dev' \
+                         --test-dir 'path/to/test' \
+                         --embeds babylon --h-dim 200 --cross-stitch-init-scheme imbalanced --threshold 0.1
+	NB: 
+    	(1) The meaning of each argument can be found in run_sluice_net.py
+    	(2) '--languages' argument refers to the language dataset which will be used for the training. 'test-languages' refers to the language dataset which will be used for testing. So '--test-languages' can only be the subset of '--languages'.
+
+
