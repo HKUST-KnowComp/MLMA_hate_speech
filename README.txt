@@ -1,5 +1,4 @@
-Repository structure: 
-
+Multitask learning:
 	(1) Python files:
 
 		constants.py: Contains constants used across all files.
