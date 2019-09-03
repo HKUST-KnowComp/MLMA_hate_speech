@@ -1,6 +1,12 @@
 Dataset
 	
-	The dataset is composed of three csv files sorted by language. They contain the tweets and the annotations described in our paper namely, the hostility type ( tweet sentiment), hostility directness, target attribute, target group and, annottaor's sentiment.
+	The dataset is composed of three csv files sorted by language. 
+	They contain the tweets and the annotations described in our paper:
+		the hostility type (column: tweet sentiment), 
+		hostility directness (column: directness), 
+		target attribute (column: target), 
+		target group (column: group) and, 
+		annotator's sentiment (column: annotator sentiment).
 
 Experiments
 
@@ -10,9 +16,9 @@ Requirements
 	
 	- Python 3.6 onwards,
 	- dyNET  0.0.0 and its dependencies (follow the instructions on https://dynet.readthedocs.io/en/latest/python.html),
-	  [On a side note, when you install DyNet make sure that you are using CUDA 9 and CUDNN for CUDA 9. I used the following command:
-	  CUDNN_ROOT=/path/to/conda/pkgs/cudnn-7.3.1-cuda10.0_0 BACKEND=/path/to/conda/pkgs/cudatoolkit-10.0.130-0 pip install git+https://github.com/clab/dynet#egg=dynet 
-	  Using CUDA 10 will generate an error when calling DyNet.
+		[On a side note, when you install DyNet make sure that you are using CUDA 9 and CUDNN for CUDA 9. I used the following 			 command:
+	  	 CUDNN_ROOT=/path/to/conda/pkgs/cudnn-7.3.1-cuda10.0_0 BACKEND=/path/to/conda/pkgs/cudatoolkit-10.0.130-0 pip install git+https://github.com/clab/dynet#egg=dynet 
+	  	 Using CUDA 10 will generate an error when calling DyNet.
 	- cross-lingual word embeddings (Babylon or MUSE. The reported results have been run using Babylon.)
 		
 
@@ -32,8 +38,10 @@ Python files
 
 How to run the program
 
-	- To save and load the trained model, you need to create a directory (e.g., model/), and specify the name of the created directory when using --model-dir argument in the command line.
-	- To save the log files of the training and evaluation, you need to create a directory (e.g., log/), and specify the name of the created directory when using --log-dir argumnet in the command line.
+	- To save and load the trained model, you need to create a directory (e.g., model/), 
+	and specify the name of the created directory when using --model-dir argument in the command line.
+	- To save the log files of the training and evaluation, you need to create a directory (e.g., log/), 
+	and specify the name of the created directory when using --log-dir argumnet in the command line.
 	Example:
 	python run_sluice_net.py --dynet-autobatch 1  --dynet-gpus 3 --dynet-seed 123 \
                           --h-layers 1 \
