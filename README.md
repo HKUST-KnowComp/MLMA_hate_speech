@@ -16,10 +16,12 @@ Requirements
 	
 	- Python 3.6 onwards,
 	- dyNET  0.0.0 and its dependencies (follow the instructions on https://dynet.readthedocs.io/en/latest/python.html),
-		[On a side note, when you install DyNet make sure that you are using CUDA 9 and CUDNN for CUDA 9. I used the following 			 command:
-	  	 CUDNN_ROOT=/path/to/conda/pkgs/cudnn-7.3.1-cuda10.0_0 BACKEND=/path/to/conda/pkgs/cudatoolkit-10.0.130-0 \
+		[On a side note, when you install DyNet make sure that you are using CUDA 9 and CUDNN for CUDA 9. 
+		 I used the following command:
+	  	 CUDNN_ROOT=/path/to/conda/pkgs/cudnn-7.3.1-cuda10.0_0 \
+		 BACKEND=/path/to/conda/pkgs/cudatoolkit-10.0.130-0 \
 		 pip install git+https://github.com/clab/dynet#egg=dynet 
-	  	 Using CUDA 10 will generate an error when calling DyNet.
+	  	 Using CUDA 10 will generate an error when calling DyNet for GPUs.
 	- cross-lingual word embeddings (Babylon or MUSE. The reported results have been run using Babylon.)
 		
 
@@ -35,7 +37,8 @@ Python files
 	- predictors.py: Contains classes for sequence predictors and layers.
 	- run_sluice_net.py: Script to train, load, and evaluate SluiceNetwork.
 	- sluice_net.py: The main logic for the SluiceNetwork. (Ruder et al. 2017. 
-		More details on the implementation of Sluice networks can be found on https://github.com/sebastianruder/sluice-networks)	  
+		More details on the implementation of Sluice networks can be found on 
+		https://github.com/sebastianruder/sluice-networks)	  
 
 How to run the program
 
@@ -56,11 +59,13 @@ How to run the program
 			 --train-dir '/path/to/train' \
                          --dev-dir '/path/to/dev' \
                          --test-dir 'path/to/test' \
-                         --embeds babylon --h-dim 200 --cross-stitch-init-scheme imbalanced --threshold 0.1
+                         --embeds babylon --h-dim 200 \
+			 --cross-stitch-init-scheme imbalanced \
+			 --threshold 0.1
 	NB: 
     	(1) The meaning of each argument can be found in run_sluice_net.py
 	(2) '--task_names' refers to a list of task names (e.g: annotator_sentiment)
     	(3) '--languages' refers to the language dataset which will be used for the training. 
-	(4) 'test-languages' refers to the language dataset which will be used for testing. It can only be the subset of '--languages'.
+	(4) 'test-languages' can only be the subset of '--languages'.
 
 
