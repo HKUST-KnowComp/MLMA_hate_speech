@@ -1,6 +1,22 @@
+
+	If you use our dataset, please cite our EMNLP paper:
+	@inproceedings{ousidhoum-etal-multilingual-hate-speech-2019,
+	title = "Multilingual and Multi-Aspect Hate Speech Analysis"
+	author = "Nedjma Ousidhoum
+         and Zizheng Lin
+         and Hongming Zhang
+         and Yangqiu Song
+         and Dit-Yan Yeung",
+	booktitle = "Proceedings of EMNLP",
+	year = "2019",
+	publisher = 	"Association for Computational Linguistics"
+	}
+
+	(You can preview our paper on https://arxiv.org/pdf/1908.11049.pdf)
+
 Dataset
-	
-	The dataset is composed of three csv files sorted by language. 
+
+	Our dataset is composed of three csv files sorted by language. 
 	They contain the tweets and the annotations described in our paper:
 		the hostility type (column: tweet sentiment), 
 		hostility directness (column: directness), 
