@@ -1,17 +1,17 @@
 
 	If you use our dataset, please cite our EMNLP paper:
 	@inproceedings{ousidhoum-etal-multilingual-hate-speech-2019,
-	title = "Multilingual and Multi-Aspect Hate Speech Analysis"
-	author = "Nedjma Ousidhoum
-         and Zizheng Lin
-         and Hongming Zhang
-         and Yangqiu Song
-         and Dit-Yan Yeung",
-	booktitle = "Proceedings of EMNLP",
-	year = "2019",
-	publisher = 	"Association for Computational Linguistics"
+    		title = "Multilingual and Multi-Aspect Hate Speech Analysis",
+    		author = "Ousidhoum, Nedjma
+             		and Lin, Zizheng
+             		and Zhang, Hongming
+            		and Song, Yangqiu
+            		and Yeung, Dit-Yan",
+    			booktitle = "Proceedings of EMNLP",
+    		year = "2019",
+    		publisher =	"Association for Computational Linguistics",
 	}
-
+	
 	(You can preview our paper on https://arxiv.org/pdf/1908.11049.pdf)
 
 Dataset
