@@ -15,8 +15,11 @@ For more details about our dataset, please check our paper:
 
 (You can preview our paper on https://arxiv.org/pdf/1908.11049.pdf)
 
+## Update
+The data is available on HuggingFace https://huggingface.co/datasets/nedjmaou/MLMA_hate_speech
+
 ## Clarification
-The multi-labeled tasks are *the hostility type of the tweet* and the *annotator's sentiment*. (We kept labels on which at least two annotators agreed on.)
+The multi-labeled tasks are *the hostility type of the tweet* and the *annotator's sentiment*. (We kept labels on which at least two annotators agreed.)
 
 ## Taxonomy
 In further experiments that involved binary classification tasks of the hostility/hate/abuse type, we considered single-labeled *normal* instances to be *non-hate/non-toxic* and all the other instances to be *toxic*.
