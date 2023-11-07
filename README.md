@@ -1,5 +1,5 @@
 # Dataset and code of our EMNLP 2019 Paper (Multilingual and Multi-Aspect Hate Speech Analysis)
-For more details about our dataset, please check our paper:
+If you use our dataset please cite our paper
 
 	@inproceedings{ousidhoum-etal-multilingual-hate-speech-2019,
     		title = "Multilingual and Multi-Aspect Hate Speech Analysis",
@@ -13,10 +13,11 @@ For more details about our dataset, please check our paper:
     		publisher =	"Association for Computational Linguistics",
 	}	
 
-(You can preview our paper on https://arxiv.org/pdf/1908.11049.pdf)
 
 ## Update
-The data is available on HuggingFace https://huggingface.co/datasets/nedjmaou/MLMA_hate_speech
+- If you need the individual labels of some data instances (unfortunately I could not find all the batches on the cloud years later), please send me an email OusidhoumN(at)cardiff(dot)ac(dot)uk
+ 
+- The dataset is available on HuggingFace https://huggingface.co/datasets/nedjmaou/MLMA_hate_speech
 
 ## Clarification
 The multi-labeled tasks are *the hostility type of the tweet* and the *annotator's sentiment*. (We kept labels on which at least two annotators agreed.)
