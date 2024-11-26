@@ -1,5 +1,5 @@
 # Dataset and code of our EMNLP 2019 Paper (Multilingual and Multi-Aspect Hate Speech Analysis)
-If you use our dataset please cite our paper
+If you use our dataset or our guidelines please cite this paper:
 
 	@inproceedings{ousidhoum-etal-multilingual-hate-speech-2019,
     		title = "Multilingual and Multi-Aspect Hate Speech Analysis",
